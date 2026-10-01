@@ -2,15 +2,15 @@
 # frozen_string_literal: true
 
 cask "pi-garden" do
-  version "1.0.1"
-  sha256 "31030bc1f81ac9d6702fafa2f8fc7bcceb98f613227f95ee261fafcf3f3646d2"
+  version "1.0.2"
+  sha256 "6b27e1f7f9a3a94982bcc1d967dbf18586c69c1dc71587652d46adf4ff55027e"
 
-  url "https://github.com/etsenake/pi-garden/releases/download/v#{version}/pi-garden-#{version}-arm64.dmg"
-  name "pi-garden"
+  url "https://github.com/etsenake/pi-garden/releases/download/v1.0.2/pi-garden-1.0.2-arm64.dmg"
+  name "Pi Garden"
   desc "Codex-style desktop shell for pi"
   homepage "https://github.com/etsenake/pi-garden"
 
   depends_on arch: :arm64
 
-  app "pi-garden.app"
+  app "Pi Garden.app"
 end
