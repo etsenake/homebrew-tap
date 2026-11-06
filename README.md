@@ -24,7 +24,8 @@ brew install --cask etsenake/tap/parc
 
 For a current manually installed copy, quit Parc, then use
 `brew install --cask --adopt etsenake/tap/parc` to let Homebrew manage it.
-Homebrew only adopts a matching app. If it rejects a different build, move that
+Homebrew compares the bundle version/build; use adoption for the exact release
+you have already verified. If it rejects a different build, move that
 app aside and retry the regular install; keep the old copy until launch passes.
 
 Upgrade with:
@@ -44,10 +45,14 @@ preserved. This cask does not define a destructive `zap` step.
 
 Stable releases use increasing three-part versions and retained `v<version>`
 tags. They install from a signed, notarized and stapled DMG containing Parc and
-an Applications shortcut. Preview app builds do not advance the stable cask. The initial 0.1.0 cask
-adopts the existing notarized build; the first stable update is 1.0.0. Release
-maintainers use Parc's `scripts/publish-homebrew.py` after packaging, installing
-and verifying a stable release. It validates the archive digest, bundle and
+an Applications shortcut. Preview app builds do not advance the stable cask.
+The cask currently remains on the 0.1.0 bootstrap. The immutable 1.0.0 candidate
+failed startup and is retained as a pre-release, never eligible for promotion.
+The next stable update awaits a passed 1.0.1 candidate; no DMG upgrade acceptance
+is claimed yet. Release maintainers use Parc's `scripts/record-release-acceptance.py`
+and `scripts/publish-homebrew.py` after Josh authorizes a ready candidate. A
+passed startup receipt must bind at least 60 seconds without a new crash to
+the exact commit, version and raw report hash. The publisher validates the archive digest, bundle and
 report versions, notarization receipt and signed-image hashes before updating
 `Casks/parc.rb`; it also verifies the DMG's Apple acceptance and mounted app
 before updating its checksum. Review, check, commit and push that change.
