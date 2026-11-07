@@ -4,8 +4,8 @@
 require_relative "../lib/parc_private_release_download_strategy"
 
 cask "parc" do
-  version "1.3.0"
-  sha256 "cc2f1bb5795e63e1db0a67611d89f4eddc14de092938dfcbdd2592e23467a6b5"
+  version "1.3.1"
+  sha256 "428b301975a43411cf7d1e7366899a7002e6bb9a0d0484cda705a94e7a682515"
 
   url "https://github.com/etsenake/parc/releases/download/v#{version}/Parc-#{version}-arm64.dmg",
       using: ParcPrivateReleaseDownloadStrategy
