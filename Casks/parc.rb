@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "parc" do
-  version "1.8.2"
-  sha256 "9cd5d7bcb6aff9b27b4d0ce525a1412afbdc09df7e63c4138ea1b1ba0ceeb6b6"
+  version "1.9.0"
+  sha256 "1ee0154d1a3d115eb8dbabe9cc7e6c6172251c9a5551e48bfba09b5d3f71170f"
 
   url "https://github.com/etsenake/parc-releases/releases/download/v#{version}/Parc-#{version}-arm64.dmg"
   name "Parc"
@@ -15,6 +15,7 @@ cask "parc" do
     strategy :github_latest
   end
 
+  auto_updates true
   depends_on arch: :arm64
   depends_on macos: :ventura
 
