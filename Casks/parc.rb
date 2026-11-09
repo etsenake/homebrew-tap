@@ -1,20 +1,18 @@
 # typed: false
 # frozen_string_literal: true
 
-require_relative "../lib/parc_private_release_download_strategy"
-
 cask "parc" do
   version "1.8.0"
   sha256 "732591a9c86fd7c8131b07702d0e69bb0fc0e90cef10f6bcb1fe12a9fc785e98"
 
-  url "https://github.com/etsenake/parc/releases/download/v#{version}/Parc-#{version}-arm64.dmg",
-      using: ParcPrivateReleaseDownloadStrategy
+  url "https://github.com/etsenake/parc-releases/releases/download/v#{version}/Parc-#{version}-arm64.dmg"
   name "Parc"
   desc "Native browser with an independent Chromium engine"
-  homepage "https://github.com/etsenake/parc"
+  homepage "https://github.com/etsenake/parc-releases"
 
   livecheck do
-    skip "Private releases; the release publisher updates this cask"
+    url :url
+    strategy :github_latest
   end
 
   depends_on arch: :arm64
