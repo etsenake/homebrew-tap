@@ -2,8 +2,8 @@
 # frozen_string_literal: true
 
 cask "parc" do
-  version "1.12.1"
-  sha256 "bdd3410f8dacc9ef32329e653d36b201e15951b4af3cab92489af75902deef71"
+  version "1.12.2"
+  sha256 "7d8bbb6b663c4a020f416cda59b5a6ae91685886cddc55f3037ca05b9e6aa321"
 
   url "https://github.com/etsenake/parc-releases/releases/download/v#{version}/Parc-#{version}-arm64.dmg"
   name "Parc"
