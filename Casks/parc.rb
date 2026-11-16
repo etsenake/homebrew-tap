@@ -2,10 +2,10 @@
 # frozen_string_literal: true
 
 cask "parc" do
-  version "2.6.0"
-  sha256 "6dadca8ca0742feb7cba3174cae57900ded3c939bc4cb57a5df613afda3a93de"
+  version "2.7.0"
+  sha256 "dfc47894b010d39bf4078dc8605436a3fa4703303306cc4cc507e502686c5344"
 
-  url "https://github.com/etsenake/parc-releases/releases/download/v#{version}/Parc-#{version}-arm64.dmg"
+  url "https://github.com/etsenake/parc-releases/releases/download/v#{version}/Parc-arm64.dmg"
   name "Parc"
   desc "Native browser with an independent Chromium engine"
   homepage "https://github.com/etsenake/parc-releases"
